@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="dialog_message">Lorem Ipsum Dolor Sit Amet...</string>
+    <string name="dialog_title">Experimenting</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+</resources>

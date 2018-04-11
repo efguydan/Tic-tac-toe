@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tictactoe3"
+    tools:context="com.example.whistle.tic_tac_toe.PlayerGameActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/playerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="12dp"
+                android:text="Player"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_marginRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/playerTag"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/tictactoex"
+                android:layout_toRightOf="@id/playerName"
+                />
+
+
+            <TextView
+                android:id="@+id/playerScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textView7"
+                android:paddingRight="8dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=":"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/compScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textView7"
+                android:paddingLeft="8dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <ImageView
+                android:id="@+id/compTag"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tictactoex"
+                android:layout_marginRight="85dp"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12dp"
+                android:text="Comp"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3.5">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot11"
+                        android:onClick="slot11C"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/tictactoee"/>
+
+                    <ImageView
+                        android:id="@+id/slot12"
+                        android:onClick="slot12C"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/tictactoee"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot13"
+                        android:onClick="slot13C"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_marginBottom="25dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/tictactoee"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="18dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/round" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot21"
+                        android:onClick="slot21C"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/tictactoee"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot22"
+                        android:onClick="slot22C"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/tictactoee"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot23"
+                        android:onClick="slot23C"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:src="@drawable/tictactoee"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="18dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/round" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot31"
+                        android:onClick="slot31C"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/tictactoee"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot32"
+                        android:onClick="slot32C"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/tictactoee"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/slot33"
+                        android:onClick="slot33C"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_marginBottom="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/tictactoee"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3.5">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:background="@drawable/round" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Clear Board"
+                android:background="@drawable/round2"
+                android:textColor="@color/white"
+                android:layout_marginRight="15dp"
+                android:onClick="clearScreen"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:background="@drawable/round2"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"
+                android:onClick="exit"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
